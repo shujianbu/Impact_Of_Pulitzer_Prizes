@@ -1,0 +1,1 @@
+pdf2txt.py -o result.txt samples/simple1.pdf

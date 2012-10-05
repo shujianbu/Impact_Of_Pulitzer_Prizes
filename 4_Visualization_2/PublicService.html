@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title> Impact Of Journalism | Computational Journalism </title>
+<link rel="stylesheet" type="text/css" title="China Environment" media="screen" href="./css/style2.css" />
+<script type="text/javascript" src="./lib/protovis.js"></script>
+<script type="text/javascript" src="./1nc/PublicService.js"></script>
+</head>
+
+<body>
+
+<div id="headerwrapper">
+
+<div id="header_left">
+
+<h1>Journalism <span class="heading_color"> Impact </span></h1>
+
+<blockquote>
+<p>	The power to mould the future of the Republic will be in the hands of the journalists of future generations.</p>
+<p class="quote_author">- Joseph Pulizter</p>
+</blockquote>
+</div>
+
+<div id="header_right">
+<div id="navcontainer">
+<ul id="navlist">
+	<li><a href="PublicService.html" id="current"> Public Service </a>  |  <a href="SportNewsReporting.html">Sport News Reporting</a></li>
+	<li><a href="BreakingNewsReporting.html">Breaking News Reporting</a>  |  <a href="InvestigativeReporting.html"> Investigative Reporting</a></li>
+	<li><a href="ExplanatoryReporting.html">Explanatory Reporting</a>  |  <a href="LocalReporting.html">Local Reporting</a></li>
+	<li><a href="NationalReporting.html"> National Reporting</a>  |  <a href="FeatureWriting.html"> Feature Writing </a></li>
+	<li><a href="Commentary.html">Commentary</a>  |  <a href="Criticism.html">Criticism</a></li>
+	<li><a href="EditorialWriting.html">Editorial Writing</a>  |  <a href="BeatReporting.html"> Beat Reporting </a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="main_content">
+
+<div id="hmfig">
+	<script type="text/javascript+protovis">
+	/* Convert from tabular format to array of objects. */
+		var cols = nba.shift();
+		nba = nba.map(function(d) pv.dict(cols, function() d[this.index]));
+		cols.shift();
+	/* The color scale ranges from Min to Max values. */
+		  var x = pv.dict(cols, function(f) pv.min(nba, function(d) d[f])),
+			  s = pv.dict(cols, function(f) pv.max(nba, function(d) d[f])),
+			  fill = pv.dict(cols, function(f) pv.Scale.linear()
+			    	.domain(x[f], s[f])
+			    	.range("#F6F6F6", "#004266"));					
+	/* The cell dimensions. */
+		var w = 30, h = 12;
+		var vis = new pv.Panel()
+		.width(cols.length * w + 4*w)
+		.height(nba.length * h - h)
+		.top(30)
+		.left(100);
+		vis.add(pv.Panel)
+			.data(cols)
+			.left(function() this.index * w)
+			.width(w)
+		.add(pv.Panel)
+			.data(nba)
+			.top(function() this.index * h)
+			.height(h)
+			.fillStyle(function(d, f) fill[f](d[f]))
+			.strokeStyle("white")
+			.lineWidth(1)
+			.antialias(false)
+			.title(function(d, f) d.Name + "'s " + f + ": " + d[f]);
+		vis.add(pv.Label)
+			.data(cols)
+			.left(function() this.index * w + w / 2)
+			.top(-1)
+			.textAngle(-Math.PI / 4)
+			.textBaseline("middle");
+		vis.add(pv.Label)
+			.data(nba)
+			.top(function() this.index * h + h / 2)
+			.left(0)
+			.textAlign("right")
+			.textBaseline("middle")
+			.text(function(d) d.Name);
+		vis.render();
+	</script>
+</div>
+
+
+<h2> Findings <br />
+<span class="date">2012.10.03</span></h2>
+
+<p>Mauris in velit quis nisl molestie dictum. Ut ac lacus. Nullam sed orci cursus leo luctus euismod. In mauris eros, ultrices in, auctor nec, porttitor eu, orci. Fusce at quam. Sed ornare posuere lorem. Aliquam erat volutpat. Pellentesque nulla est, auctor eu, molestie vitae, ultrices id, neque. Duis adipiscing sagittis arcu. Maecenas erat diam, volutpat ac, condimentum nec, dictum id, libero. Duis sed lorem eget justo posuere iaculis. Quisque sodales aliquam diam. </p>
+	
+</div>
+
+<div id="footer">
+	<p>Data From &copy; 2012 <a href="pulitzer.org"> Pulitzer Prize </a>  |  Project by Pucong Han, Shujian Bu</a></p>
+</div>
+
+</body>
+</html>

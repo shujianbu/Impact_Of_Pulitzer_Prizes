@@ -1,0 +1,200 @@
+/* CSS Document by Dieter Schneider for www.csstemplateheaven.com 2007
+http://kuler.adobe.com - theme " resource from logo"
+*/
+
+* {margin: 0; padding: 0;}
+
+/*-------------------------------------- SITE STRUCTURE -------------------------------*/
+
+body {
+	font-size: 62.5%;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+#headerwrapper {
+	width: 880px;
+	height: 120px;
+	margin-top: 50px;
+	margin-left: 120px;
+}
+
+#header_left {
+	width: 400px;
+	padding-top: 0px;
+	float: left;
+}
+
+#header_right {
+	float: right;
+	width: 300px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	font-size: 1.2em;
+	text-align: right;
+}
+
+#main_content {
+	width: 880px;
+	margin-top: 75px;
+	clear: both;
+	margin-left: 100px;
+	font-size: 1.2em;
+}
+
+#footer {
+	width: 880px;
+	margin-top: 10px;
+	clear: both;
+	margin-left: 100px;
+	text-align: center;
+}
+
+/*-------------------------------------- NAVIGATION -------------------------------*/
+
+#navlist
+{
+border-bottom: 1px solid #CCCCCC;
+width: 280px;
+}
+
+#navlist li
+{
+list-style: none;
+margin: 0;
+padding: 0.3em;
+border-top: 1px solid #CCCCCC;
+}
+
+#navlist li a {
+	text-decoration: none;
+	color: #04668c;
+}
+
+
+/*-------------------------------------- TEXT FORMATTING -------------------------------*/
+
+p {
+	margin: 20px;
+	color: #666666;
+}
+
+h1 {
+	font-size: 3em;
+	font-style: italic;
+	color: #CCCCCC;
+	border-bottom: 1px dotted #CCC;
+	padding-bottom: 8px;
+}
+
+h2 {
+	margin-left: 20px;
+	color: #04668c;
+	font-size: 1.2em;
+	background: url(../images/date.gif) no-repeat;
+	padding-top: 1px;
+	padding-left: 5px;
+	height: 26px;
+}
+
+h3 {}
+
+.heading_color {
+	color: #04668C;
+	font-style: italic;
+}
+
+blockquote {
+	font-size: 1.6em;
+	font-style: italic;
+	color: #999999;
+	background: url(../images/quote.gif) no-repeat;
+	padding-top: 5px;
+	padding-left: 5px;
+	margin-top: 10px;
+}
+
+.quote_author {
+	text-align: right;
+	font-size: 0.7em;
+	font-style: italic;
+	color: #63A5BF;
+	font-weight: bold;
+	margin: 0px;
+}
+
+.date {
+	font-size: 0.8em;
+	color: #CCCCCC;
+	
+}
+
+a:link {color: #04668c}     /* unvisited link */
+a:visited {color: #04668c}  /* visited link */
+a:hover {color: #000000}   /* mouse over link */
+a:active {color: #03738C}   /* selected link */
+a#current {background: #D4D4D4;}
+	
+/* Image gallery */
+
+.gallery {
+width: 99%;
+margin: 100px 20px 20px 20px; /*top, right, bottom, left*/
+}
+
+.photo {
+float: left;
+display: inline;
+width: 176px;
+height: 175px;
+overflow: auto;
+position: relative;
+margin-right: 14px;
+}
+
+.photo a img {
+margin: 0 auto 1px auto;
+border: 5px solid #63A5BF;
+}
+
+.photo a:hover img {
+border: 5px solid #04668C;
+}
+
+.photo p {
+margin: 2px 0 0 2px;
+line-height: 1;
+color: #04668C;
+font-weight: bold;
+text-align: center;
+}
+
+.photo p, .photo p a, .photo p a:visited {
+color: #04668C;
+text-decoration: none;
+font-weight: normal;
+}
+
+/*-------------------------------------- FIGURE FORMATTING: Donut, Bar, Heatmap -------------------------------*/
+#dnfig {
+	width: 880px;
+	height: 300px;		
+	margin-top: 30px;
+	margin-bottom: 0px;	
+	margin-left: 100px;
+}
+
+#brfig {
+	width: 880px;
+	height: 405px;		
+	margin-top: 0px;
+	margin-bottom: 0px;	
+	margin-left: 110px;
+}
+
+#hmfig {
+	width: 880px;
+	margin-top: 30px;
+	margin-bottom: 5px;
+	clear: both;
+	margin-left: 100px;
+}

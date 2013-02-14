@@ -16,4 +16,4 @@ Tools Used:
 - Javascript: Google/D3 Lib
 - XPDF 
 
-Visualiztion: http://shujianbu.github.com/Impact_Of_Journalism/
+Visualiztion: http://shujianbu.github.com/Impact_Of_Pulitzer_Prizes/
